@@ -1,0 +1,61 @@
+Python 3.7.4 (tags/v3.7.4:e09359112e, Jul  8 2019, 19:29:22) [MSC v.1916 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> 
+>>> 
+>>> 
+>>> bool('python')
+True
+>>> a=1
+>>> b="python"
+>>> c[1,2,3]
+Traceback (most recent call last):
+  File "<pyshell#6>", line 1, in <module>
+    c[1,2,3]
+NameError: name 'c' is not defined
+>>> c=[1,2,3]
+>>> a=[1,2,3]
+>>> a
+[1, 2, 3]
+>>> id(a)
+58697928
+>>> a=[1,2,3]
+>>> b=a
+>>> id(a)
+10442752
+>>> id(b)
+10442752
+>>> a is b
+True
+>>> a[1]=4
+>>> a
+[1, 4, 3]
+>>> b
+[1, 4, 3]
+>>> a=[1,2,3]
+>>> b=a[:]
+>>> a[1]=4
+>>> a
+[1, 4, 3]
+>>> b
+[1, 2, 3]
+>>> from copy import copy
+>>> b=copy(a)
+>>> b is a
+False
+>>> a,b=('python', 'life')
+>>> (a,b)='python', 'life'
+>>> [a,b]\['python','life']
+SyntaxError: unexpected character after line continuation character
+>>> [a,b]=['python','life']
+>>> a
+'python'
+>>> b
+'life'
+>>> a=3
+>>> b=5
+>>> a,b=b,a
+>>> a
+5
+>>> b
+3
+>>> 
